@@ -93,7 +93,7 @@
                         <td>{{ $category->description }}
                         </td>
                         <td>{{ $category->ideas->count() }}</td>
-                        <td>{{ $category->ideas->count() }}</td>
+                        <td></td>
                         <td>{{ $category->is_active }}</td>
                         <td>
                             <div>

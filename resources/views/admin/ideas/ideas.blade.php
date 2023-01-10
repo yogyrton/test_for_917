@@ -89,10 +89,10 @@
                 @foreach($ideas as $idea)
                     <tr>
                         <td>{{ $idea->id }}</td>
-                        <td>{{ $idea->title }}</td>
+                        <td>{{ $idea->category->title }}</td>
                         <td>{{ $idea->author }}</td>
                         <td>{{ $idea->created_at }}</td>
-                        <td>{{ $idea->description }}</td>
+                        <td>{{ $idea->title }}</td>
                         <td>{{ $idea->likes }}</td>
                         <td>{{ $idea->status }}</td>
                         <td>

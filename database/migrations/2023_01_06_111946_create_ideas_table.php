@@ -23,7 +23,7 @@ class CreateIdeasTable extends Migration
             $table->string('author');
             $table->string('likes')->default(0);
             $table->string('status');
-            $table->foreignIdFor(Category::class)->constrained();
+            $table->foreignIdFor(Category::class)->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

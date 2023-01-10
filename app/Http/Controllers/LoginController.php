@@ -16,10 +16,9 @@ class LoginController extends Controller
     public function login(LoginRequest $request)
     {
         $user = $request->validated();
-        dd($user);
 
         if (Auth::attempt($user)) {
-            return redirect()->route('admin.index');
+            return redirect()->route('category.index')->with('success', 'Вы успешно вошли');
         }
 
 

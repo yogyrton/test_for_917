@@ -28,15 +28,31 @@
 <div id="container">
 
     <nav class="header-nav">
-        <div class="header-nav__logo"><a href="{{ route('category.index') }}">Список идей</a></div>
+        <div class="header-nav__logo"><a href="{{ route('home') }}" target="_blank">На сайт</a></div>
         <div class="header-nav__body">
             <ul class="header-nav__menu">
+                <li class="header-nav__list active">
+                    <a href="{{ route('idea.index') }}">
+                        <svg>
+                            <use xlink:href="/admin_assets/img/nav.svg#list"></use>
+                        </svg>
+                        Список идей
+                    </a>
+                </li>
                 <li class="header-nav__list active">
                     <a href="{{ route('category.index') }}">
                         <svg>
                             <use xlink:href="/admin_assets/img/nav.svg#list"></use>
                         </svg>
-                        Список идей
+                        Список категорий
+                    </a>
+                </li>
+                <li class="header-nav__list active">
+                    <a href="{{ route('logout') }}">
+                        <svg>
+                            <use xlink:href="/admin_assets/img/nav.svg#list"></use>
+                        </svg>
+                        Выйти
                     </a>
                 </li>
             </ul>

@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [AdminController::class, 'index2'])->name('admin.index');
 
 Route::resource('category', CategoryController::class);
 Route::resource('idea', IdeaController::class);

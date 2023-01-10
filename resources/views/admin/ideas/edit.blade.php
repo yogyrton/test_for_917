@@ -28,6 +28,7 @@
                             <div class="select add-new__select">
 
                                 <select class="btn select__btn add-new__select-btn" name="category_id">
+
                                     @foreach($categories as $category)
                                         <ul class="select__list add-new__select-list">
                                             <option class="select__item add-new__select-item" value="{{ $category }}">{{ $category }}</option>
@@ -57,7 +58,7 @@
                                     <div class="select add-new__select">
                                         <select class="btn select__btn add-new__select-btn" name="status">
                                             <ul class="select__list add-new__select-list">
-                                                <option class="select__item add-new__select-item" value="{{ $idea->author }}">{{ $idea->author }}</option>
+                                                <option class="select__item add-new__select-item" value="{{ $idea->status }}">{{ $idea->status }}</option>
                                                 <option class="select__item add-new__select-item" value="Новая">Новая</option>
                                                 <option class="select__item add-new__select-item" value="В реализации">В реализации</option>
                                                 <option class="select__item add-new__select-item" value="Реализована">Реализована</option>
