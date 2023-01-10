@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login_process', [LoginController::class, 'login'])->name('login_process');
+
+
+Route::get('index', function (){
+    return 1111111;
+})->name('111');
