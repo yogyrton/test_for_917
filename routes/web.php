@@ -30,7 +30,7 @@ Route::prefix('login')->group(function (){
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/{cat}', [HomeController::class, 'showIdeaCategory'])->name('show_idea_category');
 Route::post('/', [HomeController::class, 'showForm'])->name('show_form');
-Route::post('/{cat}', [HomeController::class, 'showForm2'])->name('show_form2');
+
 
 
 

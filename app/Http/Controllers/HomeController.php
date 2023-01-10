@@ -21,17 +21,21 @@ class HomeController extends Controller
     {
         $file = $request->file('file')->store('img/ideas', 'public');
 
+        $category = Category::query()->first()->value('id');
+
         Idea::query()->create([
             'title' => $request->theme,
             'description' => $request->comment,
             'author' => $request->firstname,
             'status' => 'Новая',
             'thumbnail' => $file,
-            'category_id' => 1,
+            'category_id' => $category,
         ]);
 
         return redirect()->route('home');
+
     }
+
 
     public function showIdeaCategory($cat)
     {
