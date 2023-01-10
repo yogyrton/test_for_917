@@ -20,7 +20,6 @@ class HomeController extends Controller
     public function showForm(IdeaFormCreate $request)
     {
         $file = $request->file('file')->store('img/ideas', 'public');
-
         $category = Category::query()->first()->value('id');
 
         Idea::query()->create([
